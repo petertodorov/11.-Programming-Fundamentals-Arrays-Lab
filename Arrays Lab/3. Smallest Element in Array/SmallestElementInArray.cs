@@ -9,14 +9,8 @@ class SmallestElementInArray
     static void Main(string[] args)
     {
         int[] input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-        int smallest = int.MaxValue;
-        for (int i = 0; i < input.Length; i++)
-        {
-            if (input[i]<smallest)
-            {
-                smallest = input[i];
-            }
-        }
+        int smallest = input.Min();
+       
         Console.WriteLine(smallest);
     }
 }
